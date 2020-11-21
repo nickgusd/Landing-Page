@@ -56,9 +56,10 @@ const photos2 = [
 
 function Home() {
     return(
-        <div>
-            <SimpleContainer pics={photos}/>
-            <SimpleContainer pics={photos2}/>
+        <div >
+            <SimpleContainer pics={photos} style={{width: "100% !important"}}/>
+            <SimpleContainer pics={photos2} style={{width: "100% !important"}}/>
+            <SimpleContainer pics={photos2} style={{width: "100% !important"}}/>
             
             
         </div>

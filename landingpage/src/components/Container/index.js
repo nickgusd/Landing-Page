@@ -16,7 +16,7 @@ export default function SimpleContainer(props) {
         <React.Fragment>
             <CssBaseline />
             
-            <Container style={{ backgroundColor: 'white', height: '40vh', width: "100% !important", paddingLeft: "0 !important", border: "1px solid black" }}>
+            <Container style={{ height: "60vh", backgroundColor: 'white',  width: "100% !important", paddingLeft: "0 !important", border: "1px solid black", display: "block", margin: "0 auto", marginLeft: "0px !important", marginRight: "0px !important" }}>
             
                 <div  style={{ backgroundColor: 'white', height: '20vh', width: "100% !important", paddingLeft: "0 !important", border: "1px solid black" }}
                 >
