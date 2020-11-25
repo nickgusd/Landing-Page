@@ -5,6 +5,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import "./style.css"
 // import Home from "../../pages/Home";
 
 // import tileData from './tileData';
@@ -75,16 +76,17 @@ const useStyles = makeStyles((theme) => ({
 // ]
 
 
+
 export default function SingleLineGridList(props) {
     const classes = useStyles();
 
     console.log(props.images)
 
     return (
-        <div className={classes.root} style={{height: "30vh"}}>
-            <GridList className={classes.gridList} cols={2.5} >
+        <div  style={{height: "30vh"}}>
+            <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
-                    <GridListTile key={tile.img} >
+                    <GridListTile key={tile.img} id={tile.title} >
                         <img src={tile.img} alt={tile.title} />
                         <GridListTileBar
                             

@@ -1,0 +1,14 @@
+/* #home-container {
+    background-color: blue !important;
+} */
+
+@media (min-width: 1200px) {
+
+    #home-container, #sub-container {
+        max-width: 100% !important;
+    }
+}
+
+/* .makeStyles-gridList-2 {
+    height: 300px;
+} */

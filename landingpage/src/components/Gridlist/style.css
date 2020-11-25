@@ -1,0 +1,8 @@
+
+.MuiGridListTile-root {
+    height: 25vh !important;
+}
+
+#Image5, #Image6, #Image7, #Image8 {
+    height: 380px !important;
+}

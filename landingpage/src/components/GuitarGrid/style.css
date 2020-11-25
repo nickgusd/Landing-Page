@@ -1,0 +1,13 @@
+.Card1 {
+    display: block;
+    margin: 0 auto;
+}
+
+.MuiPaper-root, .MuiCard-root {
+    display: block;
+    margin: 0 auto;
+}
+
+#guitar-grid {
+    margin-top: 200px;
+}

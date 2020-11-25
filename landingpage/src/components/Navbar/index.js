@@ -1,6 +1,6 @@
 import React from "react";
 import {NavDropdown, Form, FormControl, Button, Nav, Navbar} from "react-bootstrap";
-import Logo from "../../assets/guitarlogo.png";
+import Logo from "../../assets/download-3.jpg";
 import "./index.css"
 
 
@@ -9,13 +9,14 @@ function MyNavbar() {
 
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="light" expand="lg" id="myNav" className="navbar-fixed-top">
                 <Navbar.Brand href="#home"><img src={Logo} alt="logo" style={{transform: "scale(.8)"}}></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/guitars">Guitars</Nav.Link>
+                        <Nav.Link href="/artists">Artists</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
