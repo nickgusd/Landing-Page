@@ -87,6 +87,8 @@ export default function SingleLineGridList(props) {
             <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
                     <GridListTile key={tile.img} id={tile.title} >
+                        {/* {tile.type === "iframe" ? {...tile.img} : ""} */}
+
                         <img src={tile.img} alt={tile.title} />
                         <GridListTileBar
                             
