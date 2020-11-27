@@ -45,7 +45,7 @@ const photos = [
 
 ]
 
-const photos2 = [
+const artists = [
     {
         img: Image5,
         title: "Image5",
@@ -130,26 +130,24 @@ const artistVids = [
 
     {
         img: <iframe width="560" height="315" src="https://www.youtube.com/embed/kDyZY-6T43s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="jpvid"></iframe>,
-        title: "Image13",
+        title: "Image17",
         type: "iframe"
     },
     {
-        img: NewGuitar2,
-        title: "Image14",
-        type: "photo"
+        img: <iframe width="560" height="315" src="https://www.youtube.com/embed/qZ8GoSY6xbc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+        title: "Image18",
+        type: "iframe"
     },
     {
-        img: NewGuitar3,
-        title: "Image15",
-        type: "photo"
+        img: <iframe width="560" height="315" src="https://www.youtube.com/embed/s8WP49fzgMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+        title: "Image19",
+        type: "iframe"
     },
     {
-        img: NewGuitar4,
-        title: "Image16",
-        type: "photo"
+        img: <iframe width="560" height="315" src="https://www.youtube.com/embed/RqcXAoDRaH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+        title: "Image20",
+        type: "iframe"
     }
-
-
 
 ]
 
@@ -160,7 +158,7 @@ function Home() {
             <Carousel carouselpics={carouselpics} />
             <SimpleContainer pics={photos} style={{ width: "100% !important" }} />
             <SimpleContainer pics={newGuitars} style={{ width: "100% !important" }} />
-            <SimpleContainer pics={photos2} style={{ width: "100% !important" }} className="artist-container" />
+            <SimpleContainer pics={artistVids} style={{ width: "100% !important" }} className="artist-container" />
             <SimpleContainer pics={guitarComponents} style={{ height: "110% !important", marginTop: "200px" }} />
 
 
