@@ -59,7 +59,7 @@ export default function FullWidthGrid(props) {
                         {/* <Button variant="outline-dark" type="button" onClick={callModal} className="guitar-button">{guitar.title}
                        
                         </Button>{' '} */}
-                        <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard}/>
+                        <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price}/>
                         {/* {guitar.Color, guitar.Hardware, guitar.Model, guitar.Pickguard} */}
                         {/* <SimpleModal items={props.guitarCards}/> */}
                         {/* <Button variant="outline-dark">{guitar.title} </Button>{' '} */}

@@ -95,13 +95,14 @@ export default function SingleLineGridList(props) {
                             title={tile.title}
                             classes={{
                                 root: classes.titleBar,
-                                title: classes.title,
+                                // title: classes.title,
                             }}
-                            actionIcon={
-                                <IconButton aria-label={`star ${tile.title}`}>
-                                    <StarBorderIcon className={classes.title} />
-                                </IconButton>
-                            }
+                            
+                            // actionIcon={
+                            //     // <IconButton aria-label={`star ${tile.title}`}>
+                            //     //     {/* <StarBorderIcon className={classes.title} /> */}
+                            //     // </IconButton>
+                            // }
                         />
                     </GridListTile>
                 ))}

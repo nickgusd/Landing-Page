@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button } from "react-bootstrap";
+import Paypal from "../Paypal/index";
+import "./style.css"
 
 
 function rand() {
@@ -32,8 +34,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
-
 export default function SimpleModal(props) {
 
     console.log(props)
@@ -59,22 +59,27 @@ export default function SimpleModal(props) {
 
 
 
-        <div style={modalStyle} className={classes.paper}>
-            <h2 id="simple-modal-title">Title: {props.instrument}</h2>
+        <div style={modalStyle} className={classes.paper} id="centerModal">
+            <strong><h2 id="simple-modal-title" style={{fontSize: "20px", textAlign: "center"}}>{props.instrument}</h2></strong>
+            <hr/>
             <p id="simple-modal-description">
-            Color: {props.color}
+            <strong>Color: </strong>{props.color}
             </p>
             <p id="simple-modal-description">
-            hardware: {props.hardware}
+            <strong>hardware: </strong>{props.hardware}
             </p>
             <p id="simple-modal-description">
-            Model: {props.model}
+            <strong>Model: </strong>{props.model}
             </p>
             <p id="simple-modal-description">
-            Pickguard: {props.pickguard}
+            <strong>Pickguard: </strong>{props.pickguard}
             </p>
+            <p id="simple-modal-description">
+            <strong>Price:</strong> {props.price}
+            </p>
+            <Paypal/>
 
-            <SimpleModal />
+            {/* <SimpleModal /> */}
         </div>
     );
 
