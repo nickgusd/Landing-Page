@@ -1,10 +1,13 @@
 import React from 'react';
+import {useHistory} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Nav from "react-bootstrap/Nav";
+import Link from "react";
 import "./style.css"
 // import Home from "../../pages/Home";
 
@@ -37,43 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-
-// const photos = [
-//     {
-//         img: Image1,
-//         title: "Image1",
-//     },
-//     {
-//         img: Image2,
-//         title: "Image1",
-//     },
-//     {
-//         img: image3,
-//         title: "Image1",
-//     },
-//     {
-//         img: Image4,
-//         title: "Image1",
-//     },
-
-// ]
+//click function for image redirect
 
 
 
@@ -82,14 +49,21 @@ export default function SingleLineGridList(props) {
 
     console.log(props.images)
 
+    let history = useHistory();
+
+    const handleClick = () => {
+        history.push(`/guitars`)
+        
+        }
+
     return (
         <div  style={{height: "30vh"}}>
             <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
-                    <GridListTile key={tile.img} id={tile.title} >
+                    <GridListTile key={tile.img} id={tile.id} >
                         {tile.type === "iframe" ? {...tile.img} : ""}
-
-                        <img src={tile.img} alt={tile.title} />
+                        
+                        <img src={tile.img} alt={tile.title} onClick={handleClick} />
                         <GridListTileBar
                             
                             title={tile.title}

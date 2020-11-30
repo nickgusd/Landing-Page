@@ -28,19 +28,19 @@ import Newguitar5 from "../assets/newguitar5.jpg"
 const photos = [
     {
         img: Image1,
-        title: "Image1",
+        title: "Majesty Purple Nebula",
     },
     {
         img: Image2,
-        title: "Image2",
+        title: "Majesty Artic Dream",
     },
     {
         img: image3,
-        title: "Image3",
+        title: "Majesty Nomac",
     },
     {
         img: Newguitar5,
-        title: "Image4",
+        title: "Majesty Gold Mine",
     },
 
 ]
@@ -91,38 +91,42 @@ const carouselpics = [
 const guitarComponents = [
     {
         img: Component1,
-        title: "Image9",
+        title: "Trademark 4 over 2 Design",
+        id: "component1"
     },
     {
         img: Component2,
-        title: "Image10",
+        title: "Schaller Locking Tuners",
+        id: "component2"
     },
     {
         img: Component3,
-        title: "Image11",
+        title: "5-Bolt Sculpted Neck Joint",
+        id: "component3"
     },
     {
         img: Component4,
-        title: "Image12",
+        title: "Truss Rod Adjustment Wheel",
+        id: "component4"
     }
 ]
 
 const newGuitars = [
     {
         img: Image4,
-        title: "Image13",
+        title: "Steve Morse",
     },
     {
         img: NewGuitar2,
-        title: "Image14",
+        title: "Stringray RS",
     },
     {
         img: NewGuitar3,
-        title: "Image15",
+        title: "Mariposa",
     },
     {
         img: NewGuitar4,
-        title: "Image16",
+        title: "ST. Vincent HH",
     }
 ]
 
@@ -130,23 +134,27 @@ const artistVids = [
 
     {
         img: <iframe width="560" height="315" src="https://www.youtube.com/embed/kDyZY-6T43s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="jpvid"></iframe>,
-        title: "Image17",
-        type: "iframe"
+        title: "John Petrucci",
+        type: "iframe",
+        id: "iframe1"
     },
     {
         img: <iframe width="560" height="315" src="https://www.youtube.com/embed/qZ8GoSY6xbc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
-        title: "Image18",
-        type: "iframe"
+        title: "Jason Richardson",
+        type: "iframe",
+        id: "iframe2"
     },
     {
         img: <iframe width="560" height="315" src="https://www.youtube.com/embed/s8WP49fzgMA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
-        title: "Image19",
-        type: "iframe"
+        title: "Hunter Hayes",
+        type: "iframe",
+        id: "iframe3"
     },
     {
         img: <iframe width="560" height="315" src="https://www.youtube.com/embed/RqcXAoDRaH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
-        title: "Image20",
-        type: "iframe"
+        title: "Sterling",
+        type: "iframe",
+        id: "iframe4"
     }
 
 ]

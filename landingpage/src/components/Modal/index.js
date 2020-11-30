@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import { Button } from "react-bootstrap";
-import Paypal from "../Paypal/index";
+import Paypal from "../Paypal/index.js";
 import "./style.css"
 
 

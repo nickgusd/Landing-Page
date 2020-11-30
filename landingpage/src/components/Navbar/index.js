@@ -1,5 +1,5 @@
-import React from "react";
-import {NavDropdown, Form, FormControl, Button, Nav, Navbar} from "react-bootstrap";
+import React, { useState, useRef } from "react";
+import { NavDropdown, Form, FormControl, Button, Nav, Navbar } from "react-bootstrap";
 import Logo from "../../assets/download-3.jpg";
 import "./index.css"
 
@@ -7,10 +7,41 @@ import "./index.css"
 
 function MyNavbar() {
 
+    const [search, setSearch] = useState();
+    const [result, setResult] = useState([]);
+    const inputRef = useRef();
+
+
+    const handleInputChange = (event) => {
+
+        const { value } = event.target;
+        console.log(value)
+        setSearch(value)
+
+    }
+
+    
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        const filterSearch = result.filter(user => user.title === search);
+
+        if (filterSearch.length === 0) {
+            console.log("no entries found")
+        } else {
+            console.log("i need to build this part still")
+        }
+
+
+
+    }
+
+
+
     return (
         <div>
             <Navbar bg="light" expand="lg" id="myNav" className="navbar-fixed-top">
-                <Navbar.Brand href="#home"><img src={Logo} alt="logo" style={{transform: "scale(.8)"}}></img></Navbar.Brand>
+                <Navbar.Brand href="#home"><img src={Logo} alt="logo" style={{ transform: "scale(.8)" }}></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -26,8 +57,15 @@ function MyNavbar() {
                         </NavDropdown>
                     </Nav>
                     <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success">Search</Button>
+                        <input type="text" placeholder="Search" className="mr-sm-2" list="data" onChange={handleInputChange} ref={inputRef} style={{ borderRadius: "3%" }} />
+
+                        <datalist id="data">
+                            {/* {result.map(item =>
+                                <option key={item._id} value={item.username} />
+                            )} */}
+                        </datalist>
+                        {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
+                        <Button variant="outline-success" onClick={handleFormSubmit}>Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
