@@ -77,13 +77,16 @@ export default function SimpleModal(props) {
             <p id="simple-modal-description">
             <strong>Price:</strong> {props.price}
             </p>
-            <Paypal/>
+            <p id="simple-modal-description">
+            <strong>In Stock:</strong> {props.qty}
+            </p>
+            <Paypal qty={props.qty}/>
 
             {/* <SimpleModal /> */}
         </div>
     );
 
-
+ 
     return (
 
 

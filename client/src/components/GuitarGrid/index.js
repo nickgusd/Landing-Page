@@ -6,6 +6,8 @@ import Card from "../Card/index";
 import CardMedia from "../Card/index"
 import {Button} from "react-bootstrap";
 import SimpleModal from "../Modal/index";
+import {useHistory} from "react-router-dom";
+
 import "./style.css"
 
 
@@ -21,20 +23,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const callModal = () => {
-    
-    return ("Hello World")
-
-
-    
-}
-
 
 export default function FullWidthGrid(props) {
     const classes = useStyles();
     
-    
+    let history = useHistory();
 
+    const handlePageChange = () => {
+    
+        history.push('/guitarpage')
+    }
    
 
     
@@ -56,13 +54,11 @@ export default function FullWidthGrid(props) {
                         <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} ></img>
                         {/* <button>{guitar.title}</button> */}
                         
-                        {/* <Button variant="outline-dark" type="button" onClick={callModal} className="guitar-button">{guitar.title}
+                        <Button variant="outline-dark" type="button" onClick={handlePageChange} className="guitar-button">{guitar.title}
                        
-                        </Button>{' '} */}
-                        <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price}/>
-                        {/* {guitar.Color, guitar.Hardware, guitar.Model, guitar.Pickguard} */}
-                        {/* <SimpleModal items={props.guitarCards}/> */}
-                        {/* <Button variant="outline-dark">{guitar.title} </Button>{' '} */}
+                        </Button>{' '}
+                        {/* <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price} qty={guitar.Qty}/> */}
+                      
                         </Paper>
                         </Grid>
 

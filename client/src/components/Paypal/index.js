@@ -6,6 +6,8 @@ import ReactDOM from "react-dom";
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 function Paypal() {
+
+
   const createOrder = (data, actions) =>{
     return actions.order.create({
       purchase_units: [

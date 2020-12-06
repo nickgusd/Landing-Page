@@ -6,7 +6,8 @@ import Home from "./pages/Home";
 // import { Navbar } from "react-bootstrap";
 import Guitars from "./pages/Guitars";
 import {BrowserRouter as Router, Route} from "react-router-dom"
-import Artists from "./pages/Artists"
+import Artists from "./pages/Artists";
+import GuitarPage from "./pages/GuitarPage";
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/guitars" component={Guitars} />
         <Route exact path="/artists" component={Artists} />
+        <Route exact path="/guitarpage" component={GuitarPage} />
       </Router>
 
     </>

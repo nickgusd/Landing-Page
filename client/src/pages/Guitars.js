@@ -22,7 +22,8 @@ const photos = [
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
         Pickguard: "None",
         Hardware: "Chrome",
-        Price: "$5,299.00"
+        Price: "$5,299.00",
+        Qty: "10"
     },
     {
         img: Image2,
@@ -32,7 +33,9 @@ const photos = [
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
         Pickguard: "None",
         Hardware: "Chrome",
-        Price: "$3,000.00"
+        Price: "$3,000.00",
+        Qty: "10"
+
     },
     {
         img: image3,
@@ -42,7 +45,8 @@ const photos = [
         Neck: "Abalone Inlay",
         Pickguard: "None",
         Hardware: "Chrome",
-        Price: "$10,000"
+        Price: "$10,000",
+        Qty: "10"
     },
     {
         img: Image4,
@@ -52,7 +56,8 @@ const photos = [
         Neck: "Maple w/Rosewood Fretboard",
         Pickguard: "Black",
         Hardware: "Chrome",
-        Price: "$2,499"
+        Price: "$2,499",
+        Qty: "10"
         
     },
     {
@@ -71,7 +76,8 @@ const photos = [
         Neck: "Figured Roasted Maple w/ Ebony Fretboard",
         Pickguard: "Matte Black",
         Hardware: "Chrome",
-        Price: "$2,599"
+        Price: "$2,599",
+        Qty: "10"
     },
     {
         img: Newguitar5,
@@ -81,7 +87,8 @@ const photos = [
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
         Pickguard: "None",
         Hardware: "Chrome",
-        Price: "$3,000"
+        Price: "$3,000",
+        Qty: "10"
     }
 
 
