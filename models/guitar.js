@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const guitarSchema = new Schema({
    guitar: String,
    quantity: Number,
-   price: Number
+   price: Number,
+   image: String
 });
 
 const Guitar = mongoose.model("Guitar", guitarSchema);

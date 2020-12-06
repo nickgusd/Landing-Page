@@ -15,8 +15,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function GuitarPageGrid() {
+export default function GuitarPageGrid(props) {
   const classes = useStyles();
+
+    console.log(props.guitars)
 
   return (
     <div className={classes.root} id="guitar-grid">
@@ -25,7 +27,11 @@ export default function GuitarPageGrid() {
           <Paper className={classes.paper}>xs=12</Paper>
         </Grid>
         <Grid item xs={12}>
-          {/* <Paper className={classes.paper}>xs=12</Paper> */}
+          <Paper className={classes.paper}>xs=12
+          {/* {props.guitars.map(guitar => {
+
+          })} */}
+          </Paper>
         </Grid>
         <Grid item xs={6}>
           {/* <Paper className={classes.paper}>xs=6</Paper> */}

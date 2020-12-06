@@ -25,13 +25,31 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function FullWidthGrid(props) {
+
+    const [guitarpage, setGuitarpage] = useState();
+
+    console.log(props)
+
     const classes = useStyles();
     
     let history = useHistory();
 
-    const handlePageChange = () => {
-    
-        history.push('/guitarpage')
+    const handlePageChange = async () => {
+
+
+        try {
+            await setGuitarpage(props.guitarCards)
+            console.log(guitarpage)
+        } catch (err) {
+            console.log(err)
+        }
+
+        // history.push({
+        //     pathname: "/guitarpage",
+        //     data: guitarpage
+        // }
+        // )
+
     }
    
 
@@ -54,7 +72,10 @@ export default function FullWidthGrid(props) {
                         <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} ></img>
                         {/* <button>{guitar.title}</button> */}
                         
-                        <Button variant="outline-dark" type="button" onClick={handlePageChange} className="guitar-button">{guitar.title}
+                        <Button variant="outline-dark" type="button" onClick={handlePageChange} className={guitar.title}  >
+                            
+                            
+                            {guitar.title}
                        
                         </Button>{' '}
                         {/* <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price} qty={guitar.Qty}/> */}
