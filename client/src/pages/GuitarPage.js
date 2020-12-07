@@ -3,12 +3,15 @@ import API from "../utils/API";
 import GuitarPageGrid from "../components/GuitarPageGrid/index"
 
 
-function GuitarPage() {
+function GuitarPage(props) {
 
     const [guitars, setGuitars] = useState();
     
     
     useEffect( () => {
+        const page = props.match.params.guitar;
+        console.log(page)
+        setGuitars(page)
         getGuitars();
 
     }, [])

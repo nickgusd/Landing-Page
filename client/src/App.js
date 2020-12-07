@@ -13,8 +13,6 @@ import GuitarPage from "./pages/GuitarPage";
 
 function App() {
 
-
-
   return (
     <>
       {/* <MyNavbar/>
@@ -25,7 +23,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/guitars" component={Guitars} />
         <Route exact path="/artists" component={Artists} />
-        <Route exact path="/guitarpage" component={GuitarPage} />
+        <Route exact path="/guitarpage/:guitar" render={(props) => <GuitarPage {...props} />} />
       </Router>
 
     </>

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -28,32 +29,19 @@ export default function FullWidthGrid(props) {
 
     const [guitarpage, setGuitarpage] = useState();
 
-    console.log(props)
+    console.log(props.guitarCards)
 
     const classes = useStyles();
     
     let history = useHistory();
 
-    const handlePageChange = async () => {
+    // const handlePageChange = () => {
 
 
-        try {
-            await setGuitarpage(props.guitarCards)
-            console.log(guitarpage)
-        } catch (err) {
-            console.log(err)
-        }
+    //     history.push(`/guitarpage/` + props.guitarCards[0].Model )
 
-        // history.push({
-        //     pathname: "/guitarpage",
-        //     data: guitarpage
-        // }
-        // )
-
-    }
+    // }
    
-
-    
     console.log(props.guitarCards)
 
     return (
@@ -72,12 +60,15 @@ export default function FullWidthGrid(props) {
                         <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} ></img>
                         {/* <button>{guitar.title}</button> */}
                         
-                        <Button variant="outline-dark" type="button" onClick={handlePageChange} className={guitar.title}  >
+                        <Link to={`/guitarpage/${guitar.title}`}>
+
+                        <Button variant="outline-dark" type="button"  className={guitar.title}  >
                             
                             
                             {guitar.title}
                        
                         </Button>{' '}
+                        </Link>
                         {/* <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price} qty={guitar.Qty}/> */}
                       
                         </Paper>
@@ -87,7 +78,6 @@ export default function FullWidthGrid(props) {
 
                 })}
                 
-
 
 {/* 
                 <Grid item xs={12} sm={6} >
