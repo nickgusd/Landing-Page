@@ -8,7 +8,8 @@ const guitarSchema = new Schema({
    image: String,
    pickguard: String,
    hardware: String,
-   guitarImage: String
+   guitarImage: String,
+   componentImage: String
 });
 
 const Guitar = mongoose.model("Guitar", guitarSchema);

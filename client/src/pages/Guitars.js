@@ -27,9 +27,9 @@ const photos = [
     },
     {
         img: Image2,
-        title: "Artic Dream",
+        title: "Arctic Dream",
         Model: "Majesty",
-        Color: "Artic Dream",
+        Color: "Arctic Dream",
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
         Pickguard: "None",
         Hardware: "Chrome",
