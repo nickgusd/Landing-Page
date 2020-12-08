@@ -10,7 +10,21 @@ module.exports = {
         db.Guitar.create(req.body)
         .then(dbnewGuitar => res.json(dbnewGuitar))
         .catch(err => res.status(422).json(err));
-    }
+    },
+
+    updateGuitars: function(req, res) {
+        db.Guitar.findOneAndUpdate({_id: req.params.id}, req.body)
+
+        .then(dbupdate => res.json(dbupdate))
+        .catch(err => res.status(422).json(err));
+    },
+    updateGuitarQty: function(req, res) {
+        db.Guitar.findOneAndUpdate({
+            quantity: req.params.quantity
+        }, req.body)
+        .then(dbupdate => res.json(dbupdate))
+        .catch(err => res.status(422).json(err));
+    },
 
 
-};
+}; 

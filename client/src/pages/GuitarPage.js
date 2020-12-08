@@ -5,30 +5,26 @@ import GuitarPageGrid from "../components/GuitarPageGrid/index"
 
 function GuitarPage(props) {
 
-    const [guitars, setGuitars] = useState();
+    const [guitars, setGuitars] = useState([]);
     
     
-    useEffect( () => {
+    
+    useEffect( (prevState) => {
         const page = props.match.params.guitar;
-        console.log(page)
+        // console.log(page)
         setGuitars(page)
-        getGuitars();
+        console.log(prevState)
+       
 
     }, [])
 
-
-const getGuitars = () => {
-    API.getGuitars()
-    .then(res => {
-        setGuitars(res.data);
-    })
-
     console.log(guitars)
-}
+
+
 
     return (
         <div>
-            <GuitarPageGrid  guitars={guitars}/>
+            <GuitarPageGrid  guitars={guitars} />
         </div>
     )
 }

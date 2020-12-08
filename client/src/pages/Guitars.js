@@ -16,7 +16,7 @@ import Newguitar5 from "../assets/newguitar5.jpg"
 const photos = [
     {
         img: Image1,
-        title: "Music Man Majesty",
+        title: "Majesty Purple Nebula",
         Model: "Majesty Purple Nebula",
         Color: "Purple Nebula",
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
@@ -81,7 +81,7 @@ const photos = [
     },
     {
         img: Newguitar5,
-        title: "Music Man Majesty",
+        title: "Majesty Gold",
         Model: "Majesty Gold",
         Color: "Gold Mine",
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",

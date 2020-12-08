@@ -42,7 +42,6 @@ function MyNavbar() {
 
     }
 
-    
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
