@@ -6,6 +6,14 @@ module.exports = {
         .then( dbGuitar => res.json(dbGuitar))
         .catch(err => res.status(404).json(err));
     },
+
+    findGuitarByName: function(req, res) {
+        db.Guitar.find({guitar: req.params.guitar})
+        .then(dbGuitarName => res.json(dbGuitarName))
+        .catch(err => res.status(422).json(err))
+    },
+
+
     create: function(req, res) {
         db.Guitar.create(req.body)
         .then(dbnewGuitar => res.json(dbnewGuitar))

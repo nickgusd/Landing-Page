@@ -62,11 +62,11 @@ const photos = [
     },
     {
         img: NewGuitar1,
-        title: "Music Man",
+        title: "Axis",
     },
     {
         img: NewGuitar2,
-        title: "Music Man",
+        title: "Stingray",
     },
     {
         img: NewGuitar4,

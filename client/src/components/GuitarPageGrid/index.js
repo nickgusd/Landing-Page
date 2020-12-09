@@ -3,9 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import API from "../../utils/API"
-import { Spinner } from "react-bootstrap"
 import "./style.css";
-import { render } from 'react-dom';
 import Paypal from "../Paypal/index"
 
 const useStyles = makeStyles((theme) => ({
@@ -22,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
 export default function GuitarPageGrid(props) {
   const classes = useStyles();
   const [guitarData, setGuitarData] = useState("");
-
-
+  const guitarName= props.guitars
+  console.log(guitarName)
 
   useEffect(() => {
-    getGuitarData()
 
+    getGuitarData()
 
   }, [])
 
@@ -36,9 +34,10 @@ export default function GuitarPageGrid(props) {
   const getGuitarData = async () => {
 
     try {
-      await API.getGuitars()
+      await API.getGuitarByName(guitarName)
         .then(res => {
           setGuitarData(res.data);
+          console.log(res.data)
         })
 
     } catch (err) {
@@ -46,16 +45,17 @@ export default function GuitarPageGrid(props) {
     }
   }
 
-  console.log(guitarData)
+ 
 
 
   return (
     <div className={classes.root} id="guitar-grid">
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+          {guitarData === "" ? "" : guitarData.map(item => {
 
             if (item.guitar === props.guitars) {
+             
 
               return <div>
                 {/* <h1 id="guitar-title">{props.guitars}</h1> */}
@@ -69,7 +69,7 @@ export default function GuitarPageGrid(props) {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <h1>{props.guitars}</h1>
-            {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+            {guitarData === "" ? "" : guitarData.map(item => {
 
               if (item.guitar === props.guitars) {
 
@@ -88,7 +88,7 @@ export default function GuitarPageGrid(props) {
         <Grid item xs={6}>
           <Paper className={classes.paper} style={{ width: "100%", height: "346px" }}>
             <h2>Guitar Options:</h2>
-            {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+            {guitarData === "" ? "" : guitarData.map(item => {
 
               if (item.guitar === props.guitars) {
 
@@ -111,7 +111,7 @@ export default function GuitarPageGrid(props) {
         <Grid item xs={6}>
           <Paper className={classes.paper} style={{ width: "100%", height: "346px" }}>
 
-            {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+            {guitarData === "" ? "" : guitarData.map(item => {
 
               if (item.guitar === props.guitars) {
 
@@ -128,7 +128,7 @@ export default function GuitarPageGrid(props) {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+          {guitarData === "" ? "" : guitarData.map(item => {
 
             if (item.guitar === props.guitars) {
 

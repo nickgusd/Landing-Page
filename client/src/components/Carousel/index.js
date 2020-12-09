@@ -8,7 +8,7 @@ console.log(props.carouselpics)
 
 
         <Carousel>
-  <Carousel.Item>
+  {/* <Carousel.Item>
     <img
       className="d-block w-100"
       src={props.carouselpics[0].img}
@@ -19,7 +19,7 @@ console.log(props.carouselpics)
       <h3>Ernie Ball</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </Carousel.Caption>
-  </Carousel.Item>
+  </Carousel.Item> */}
   <Carousel.Item>
     <img
       className="d-block w-100"

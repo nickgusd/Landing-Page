@@ -17,6 +17,10 @@ export default {
         return ax.get("/api/guitar");
     },
 
+    getGuitarByName: function(guitarName) {
+        return ax.get(`/api/guitar/${guitarName}`)
+    },
+
     addGuitars: function() {
         return ax.post("/api/guitar");
     }

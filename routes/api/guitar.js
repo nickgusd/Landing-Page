@@ -15,6 +15,9 @@ router.route("/:id")
 router.route("/quantity/:id")
     .put(guitarController.updateGuitarQty)
 
+//api route is "api/guitar/:guitar"    
+router.route("/:guitar")
+.get(guitarController.findGuitarByName)
 
 
 module.exports = router;

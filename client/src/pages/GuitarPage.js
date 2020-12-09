@@ -9,16 +9,16 @@ function GuitarPage(props) {
     
     
     
-    useEffect( (prevState) => {
+    useEffect(() => {
         const page = props.match.params.guitar;
         // console.log(page)
         setGuitars(page)
-        console.log(prevState)
+        
        
 
     }, [])
 
-    console.log(guitars)
+    
 
 
 

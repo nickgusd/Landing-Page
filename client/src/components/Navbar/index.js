@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { NavDropdown, Form, FormControl, Button, Nav, Navbar } from "react-bootstrap";
 import Logo from "../../assets/download-3.jpg";
 import "./index.css"
 import { useEffect } from "react";
+import {useHistory} from "react-router-dom";
 import API from "../../utils/API"
 
 
@@ -12,6 +14,7 @@ function MyNavbar() {
     const [search, setSearch] = useState();
     const [result, setResult] = useState([]);
     const inputRef = useRef();
+    let history = useHistory();
 
     useEffect( () => {
         runSearch()
@@ -45,21 +48,30 @@ function MyNavbar() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-
+       
         const filterSearch = result.filter(item => item.guitar === search);
-        console.log(filterSearch)
+        console.log(filterSearch[0].guitar)
+        
 
         if (filterSearch.length === 0) {
             console.log("no entries found")
         } else {
-            console.log("i need to build this part still")
+            //Use History
+            history.push(`/guitarpage/` + filterSearch[0].guitar )
+            inputRef.current.value = "";
+            window.location.reload()
         }
-
-
 
     }
 
+   
 
+    // const handlePageChange = () => {
+
+
+    //     history.push(`/guitarpage/` + props.guitarCards[0].Model )
+
+    // }
 
     return (
         <div>
@@ -97,3 +109,4 @@ function MyNavbar() {
 }
 
 export default MyNavbar;
+
