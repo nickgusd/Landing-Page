@@ -1,4 +1,12 @@
 #guitar-grid {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
+#guitar-title {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+}

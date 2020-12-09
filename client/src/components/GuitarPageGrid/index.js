@@ -58,15 +58,12 @@ export default function GuitarPageGrid(props) {
             if (item.guitar === props.guitars) {
 
               return <div>
+                {/* <h1 id="guitar-title">{props.guitars}</h1> */}
                 <img src={item.image} style={{ width: "100%", height: "723px" }} />
               </div>
 
             }
-
-
           })}
-
-
 
         </Grid>
         <Grid item xs={12}>
@@ -83,8 +80,6 @@ export default function GuitarPageGrid(props) {
                 </div>
 
               }
-
-
             })}
 
 
@@ -97,28 +92,38 @@ export default function GuitarPageGrid(props) {
 
               if (item.guitar === props.guitars) {
 
-                return <div>
+                return <div style={{ textAlign: "left", marginLeft: "40%", marginTop: "20px" }}>
 
-                  <p>Model: {item.price}</p>
-                  <p>Color: {item.quantity}</p>
-                  <p>Neck: {item.quantity}</p>
-                  <p>Pickguard: {item.quantity}</p>
-                  <p>Hardware: {item.quantity}</p>
+                  <p><b>Model:</b> {item.guitar}</p>
+                  <p><b>Color:</b> {item.color}</p>
+                  <p><b>Neck:</b> {item.neck}</p>
+                  <p><b>Pickguard:</b> {item.pickguard}</p>
+                  <p><b>Hardware:</b> {item.hardware}</p>
+                  <p><b>Quantity:</b> {item.quantity}</p>
 
                 </div>
 
               }
-
-
             })}
-
 
           </Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper} style={{ width: "100%", height: "346px" }}>
 
-            <h2>Price: $3000.00 USD</h2>
+            {guitarData === "" ? <h1>...Loading</h1> : guitarData.map(item => {
+
+              if (item.guitar === props.guitars) {
+
+                return <div>
+
+                  <h2>Price: ${item.price}</h2>
+
+                </div>
+
+              }
+            })}
+
             <Paypal />
           </Paper>
         </Grid>
@@ -129,13 +134,11 @@ export default function GuitarPageGrid(props) {
 
               return <div>
 
-                <img src={item.componentImage} style={{ width: "100%", height: "546px" }} />
+                <img src={item.componentImage} style={{ width: "100%", height: "546px", display: "block", margin: "0 auto" }} />
 
               </div>
 
             }
-
-
           })}
         </Grid>
       </Grid>

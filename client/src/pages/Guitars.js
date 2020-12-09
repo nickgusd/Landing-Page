@@ -2,15 +2,15 @@ import React from "react";
 import Grid from "../components/Gridlist/index"
 import SimpleContainer from "../components/Container";
 import FullWidthGrid from "../components/GuitarGrid/index";
-import Image1 from "../assets/download.jpg";
-import Image2 from "../assets/download-1.jpg";
-import image3 from "../assets/download-2.jpg";
+import Image1 from "../assets/hd photos/purplenebula.png";
+import Image2 from "../assets/hd photos/arcticdream.png";
+import image3 from "../assets/hd photos/nomacmajesty.jpg";
 import Image4 from "../assets/instrument-18.png";
-import NewGuitar1 from "../assets/newguitar1.jpg"
-import NewGuitar2 from "../assets/newguitar2.jpg"
+import NewGuitar1 from "../assets/hd photos/axis.png";
+import NewGuitar2 from "../assets/hd photos/stingray.png";
 import NewGuitar3 from "../assets/newguitar3.jpg"
-import NewGuitar4 from "../assets/newguitar4.jpg"
-import Newguitar5 from "../assets/newguitar5.jpg"
+import NewGuitar4 from "../assets/hd photos/Stvincent.png";
+import Newguitar5 from "../assets/hd photos/goldmine.jpg";
 
 
 const photos = [
@@ -80,9 +80,9 @@ const photos = [
         Qty: "10"
     },
     {
-        img: Newguitar5,
-        title: "Majesty Gold",
-        Model: "Majesty Gold",
+        img: "https://www.guitar-planet.co.uk/wp-content/uploads/2016/01/Ernie-Ball-Music-Man-Majesty-Goldmine.png",
+        title: "Majesty Goldmine",
+        Model: "Majesty Goldmine",
         Color: "Gold Mine",
         Neck: "Flame Maple and Mahogany with Ebony Fretboard",
         Pickguard: "None",

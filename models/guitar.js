@@ -9,7 +9,10 @@ const guitarSchema = new Schema({
    pickguard: String,
    hardware: String,
    guitarImage: String,
-   componentImage: String
+   componentImage: String,
+   neck: String,
+   color: String
+
 });
 
 const Guitar = mongoose.model("Guitar", guitarSchema);
