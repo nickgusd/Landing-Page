@@ -49,6 +49,17 @@ const photos = [
         Qty: "10"
     },
     {
+        img: "https://www.guitar-planet.co.uk/wp-content/uploads/2016/01/Ernie-Ball-Music-Man-Majesty-Goldmine.png",
+        title: "Majesty Goldmine",
+        Model: "Majesty Goldmine",
+        Color: "Gold Mine",
+        Neck: "Flame Maple and Mahogany with Ebony Fretboard",
+        Pickguard: "None",
+        Hardware: "Chrome",
+        Price: "$3,000",
+        Qty: "10"
+    },
+    {
         img: Image4,
         title: "Steve Morse",
         Model: "6 String - Standard Hardtail",
@@ -79,17 +90,7 @@ const photos = [
         Price: "$2,599",
         Qty: "10"
     },
-    {
-        img: "https://www.guitar-planet.co.uk/wp-content/uploads/2016/01/Ernie-Ball-Music-Man-Majesty-Goldmine.png",
-        title: "Majesty Goldmine",
-        Model: "Majesty Goldmine",
-        Color: "Gold Mine",
-        Neck: "Flame Maple and Mahogany with Ebony Fretboard",
-        Pickguard: "None",
-        Hardware: "Chrome",
-        Price: "$3,000",
-        Qty: "10"
-    }
+ 
 
 
 
