@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -45,7 +46,10 @@ console.log(props.artists[1].title.split(" ").shift())
       <GridList cellHeight={200} spacing={1} className={classes.gridList} style={{marginTop: "200px"}}  id="gridList"  >
         {props.artists.map((tile) => (
           <GridListTile key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}  id={tile.title.split(" ").shift()} >
+            <Link to={`/artistpage/${tile.title}`}>
             <img src={tile.img} alt={tile.title} />
+            </Link>
+            
             <GridListTileBar
               title={tile.title}
               titlePosition="top"

@@ -38,40 +38,9 @@ function ArtistPage() {
 const [artist, setArtist] = useState()
 
 
-    // const handleInputChange = (event) => {
-    //     const {value} = event.target;
-    //     console.log(value)
-    //     setArtist(value)
-    
-    // }
-    
-    
-    // const handleClick = () => {
-    //     console.log(artist)
-    
-    //     API.addArtists({
-    //         title: artist
-    //     })
-    //     .then(res => {
-    //         console.log(res)
-    //     })
-       
-    
-    // }
-
-
-
-
-
-
     return (
         <div>
-            {/* <input type="text" className = "artist" placeholder="artist" style={{marginTop: "400px", border: "1px solid black"}} onChange={handleInputChange}/>
-            
-            <button onClick={handleClick}>Click Me</button> */}
-
-           
-            {/* <TitlebarGridList artists={photos2}/> */}
+          
             <AdvancedGridList  artists={photos2} />
 
         </div>
