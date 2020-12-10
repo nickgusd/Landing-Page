@@ -66,10 +66,7 @@ const artists = [
 ]
 
 const carouselpics = [
-    {
-        img: Image9,
-        title: "Image5",
-    },
+   
     {
         img: Image10,
         title: "Image6",
