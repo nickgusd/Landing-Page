@@ -15,9 +15,16 @@
 .bio-text {
     margin-left:  25%;
     margin-right: 25%;
+    margin-top: 50px;
 }
 
 #guitar-img {
     transform: scale(.9)
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.2);
+    margin-top: 50px;
+}

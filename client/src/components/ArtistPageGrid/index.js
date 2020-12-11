@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ArtistPageGrid(props) {
     const classes = useStyles();
 
-    console.log(props.artist, props.data)
+    console.log(props.data)
 
     return (
         <div>
@@ -38,8 +38,15 @@ export default function ArtistPageGrid(props) {
                                 </Grid>
 
                                 <Grid item xs={12}>
+                               
+                                <h1 className={classes.paper}>{artist.guitarInfo[0].model}</h1>
+                                   {artist.video} 
+                                   
+                                </Grid>
+
+                                <Grid item xs={12}>
                                     <Paper className={classes.paper} id="bio" >
-                                        <h1>{artist.artist}</h1>
+                                        {/* <h1> {artist.guitarInfo[0].model}</h1> */}
                                         <p className="bio-text">{artist.bio}</p>
                                         <img src={artist.guitar} id="guitar-img"/>
                                     </Paper>
@@ -47,7 +54,8 @@ export default function ArtistPageGrid(props) {
 
                                 <Grid item xs={6} id="info">
                                     <Paper className={classes.paper} style={{ width: "100%", height: "346px" }}>
-                                        <h1> {artist.guitarInfo[0].model}</h1>
+                                        <h2>Guitar Options</h2>
+                                        <p> <b>Model: </b> {artist.guitarInfo[0].model}</p>
                                         <p> <b>Color:</b>  {artist.guitarInfo[0].color}</p>
                                         <p> <b>Neck:</b>  {artist.guitarInfo[0].neck}</p>
                                         <p> <b>Pickguard:</b>  {artist.guitarInfo[0].pickguard}</p>
