@@ -30,7 +30,6 @@ export default function GuitarPageGrid(props) {
   }, [])
 
 
-
   const getGuitarData = async () => {
 
     try {
@@ -45,9 +44,6 @@ export default function GuitarPageGrid(props) {
     }
   }
 
- 
-
-
   return (
     <div className={classes.root} id="guitar-grid">
       <Grid container spacing={3}>
@@ -58,7 +54,6 @@ export default function GuitarPageGrid(props) {
              
 
               return <div>
-                {/* <h1 id="guitar-title">{props.guitars}</h1> */}
                 <img src={item.image} style={{ width: "100%", height: "723px" }} />
               </div>
 
@@ -75,8 +70,6 @@ export default function GuitarPageGrid(props) {
 
                 return <div>
                   <img src={item.guitarImage} style={{ width: "1120px", height: "412px" }} />
-                  {/* <h1>{item.guitar}</h1> */}
-
                 </div>
 
               }

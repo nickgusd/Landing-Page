@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
 import { NavDropdown, Form, FormControl, Button, Nav, Navbar } from "react-bootstrap";
 import Logo from "../../assets/download-3.jpg";
-import "./index.css"
+import "./style.css"
 import { useEffect } from "react";
 import {useHistory} from "react-router-dom";
 import API from "../../utils/API"
-
 
 
 function MyNavbar() {
@@ -55,6 +53,10 @@ function MyNavbar() {
 
         if (filterSearch.length === 0) {
             console.log("no entries found")
+        } else if (filterSearch[0].guitar === "Jason Richardson" || filterSearch[0].guitar === "John Petrucci") {
+            history.push(`/artistpage/` + filterSearch[0].guitar)
+            inputRef.current.value = "";
+            window.location.reload()
         } else {
             //Use History
             history.push(`/guitarpage/` + filterSearch[0].guitar )
@@ -63,15 +65,6 @@ function MyNavbar() {
         }
 
     }
-
-   
-
-    // const handlePageChange = () => {
-
-
-    //     history.push(`/guitarpage/` + props.guitarCards[0].Model )
-
-    // }
 
     return (
         <div>
@@ -110,3 +103,4 @@ function MyNavbar() {
 
 export default MyNavbar;
 
+ 

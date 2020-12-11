@@ -4,18 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import Nav from "react-bootstrap/Nav";
-import Link from "react";
 import "./style.css"
-// import Home from "../../pages/Home";
-
-// import tileData from './tileData';
-// import Image1 from "../../assets/download.jpg";
-// import Image2 from "../../assets/download-1.jpg";
-// import image3 from "../../assets/download-2.jpg";
-// import Image4 from "../../assets/instrument-18.png";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 //click function for image redirect
-
-
 
 export default function SingleLineGridList(props) {
     const classes = useStyles();
@@ -71,12 +58,6 @@ export default function SingleLineGridList(props) {
                                 root: classes.titleBar,
                                 // title: classes.title,
                             }}
-                            
-                            // actionIcon={
-                            //     // <IconButton aria-label={`star ${tile.title}`}>
-                            //     //     {/* <StarBorderIcon className={classes.title} /> */}
-                            //     // </IconButton>
-                            // }
                         />
                     </GridListTile>
                 ))}

@@ -1,13 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Card from "../Card/index";
-import CardMedia from "../Card/index"
 import {Button} from "react-bootstrap";
-import SimpleModal from "../Modal/index";
-import {useHistory} from "react-router-dom";
+
 
 import "./style.css"
 
@@ -27,20 +24,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FullWidthGrid(props) {
 
-    const [guitarpage, setGuitarpage] = useState();
-
-    console.log(props.guitarCards)
-
     const classes = useStyles();
     
-    let history = useHistory();
-
-    // const handlePageChange = () => {
-
-
-    //     history.push(`/guitarpage/` + props.guitarCards[0].Model )
-
-    // }
    
     console.log(props.guitarCards)
 
@@ -54,48 +39,18 @@ export default function FullWidthGrid(props) {
                     return (
                         <Grid item xs={12} sm={6} key={guitar.img} >
                         <Paper className={classes.paper} style={{ height: "30vh" }}>
-                        
-                        {/* <Card className="Card1" instrument={props.guitarCards}  /> */}
                         <h2>{guitar.title}</h2>
                         <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} ></img>
-                        {/* <button>{guitar.title}</button> */}
-                        
                         <Link to={`/guitarpage/${guitar.title}`}>
-
                         <Button variant="outline-dark" type="button"  className={guitar.title}  >
-                            
-                            
                             {guitar.title}
-                       
                         </Button>{' '}
                         </Link>
-                        {/* <SimpleModal instrument={guitar.title} color={guitar.Color} hardware={guitar.Hardware} model={guitar.Model} pickguard={guitar.Pickguard} price={guitar.Price} qty={guitar.Qty}/> */}
-                      
                         </Paper>
                         </Grid>
 
                     )
-
                 })}
-                
-
-{/* 
-                <Grid item xs={12} sm={6} >
-                    <Paper className={classes.paper} style={{ height: "80vh" }}>Row 1 <Card className="Card1" /></Paper>
-
-                </Grid> */}
-
-
-
-
-
-                {/* <Grid item xs={12} sm={6} style={{height: "50vh"}}>
-          <Paper className={classes.paper} style={{height: "80vh"}}>Row 2 <Card/></Paper>
-          
-        </Grid> */}
-
-
-
             </Grid>
         </div>
     );

@@ -39,8 +39,8 @@ export default function ArtistPageGrid(props) {
 
                                 <Grid item xs={12}>
                                
-                                <h1 className={classes.paper}>{artist.guitarInfo[0].model}</h1>
-                                   {artist.video} 
+                                <h1 className={classes.paper} id="model-header">{artist.guitarInfo[0].model}</h1>
+                                   {artist.video}
                                    
                                 </Grid>
 
@@ -54,12 +54,14 @@ export default function ArtistPageGrid(props) {
 
                                 <Grid item xs={6} id="info">
                                     <Paper className={classes.paper} style={{ width: "100%", height: "346px" }}>
-                                        <h2>Guitar Options</h2>
+                                        <h2>Guitar Options: </h2>
+                                        <div style={{ textAlign: "left", marginLeft: "40%", marginTop: "20px" }}>
                                         <p> <b>Model: </b> {artist.guitarInfo[0].model}</p>
                                         <p> <b>Color:</b>  {artist.guitarInfo[0].color}</p>
                                         <p> <b>Neck:</b>  {artist.guitarInfo[0].neck}</p>
                                         <p> <b>Pickguard:</b>  {artist.guitarInfo[0].pickguard}</p>
                                         <p> <b>hardware:</b>  {artist.guitarInfo[0].hardware}</p>
+                                        </div>
                                         
                                     </Paper>
                                 </Grid>
