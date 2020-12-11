@@ -11,7 +11,7 @@ import API from "../utils/API";
 const photos2 = [
     {
         img: Image5,
-        title: "Phoenix",
+        title: "John Petrucci",
         featured: true
     },
     {

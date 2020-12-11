@@ -9,6 +9,15 @@
 
 #bio {
     text-align: center;
-    margin-left: 25%;
+    
+} 
+
+.bio-text {
+    margin-left:  25%;
     margin-right: 25%;
 }
+
+#guitar-img {
+    transform: scale(.9)
+}
+
