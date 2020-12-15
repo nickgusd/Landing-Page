@@ -23,7 +23,7 @@ const photos2 = [
         id: "artist1"
     },
     {
-        img: Image6,
+        img: "https://pbs.twimg.com/media/DwAYp4rV4AAEK8o.jpg",
         title: "Jason Richardson",
         featured: true,
         id: "artist2"
