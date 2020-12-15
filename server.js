@@ -24,7 +24,7 @@ app.use(routes);
 
 // Connect to the Mongo DB need to update database name
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/musicmandb",
+  process.env.MONGODB_URI || "mongodb://localhost/musicmanDB",
   {
       useNewUrlParser: true,
        useUnifiedTopology: true,
