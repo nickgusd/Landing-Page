@@ -47,6 +47,9 @@ export default function SingleLineGridList(props) {
         <div  style={{height: "30vh"}}>
             <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
+
+
+                    
                     <GridListTile key={tile.img} id={tile.id} >
                         {tile.type === "iframe" ? {...tile.img} : ""}
                         

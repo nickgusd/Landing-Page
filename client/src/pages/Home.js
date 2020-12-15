@@ -164,7 +164,7 @@ function Home() {
             <SimpleContainer pics={photos} style={{ width: "100% !important" }} />
             <SimpleContainer pics={newGuitars} style={{ width: "100% !important" }} />
             <SimpleContainer pics={artistVids} style={{ width: "100% !important" }} className="artist-container" />
-            <SimpleContainer pics={guitarComponents} style={{ height: "110% !important", marginTop: "200px" }} />
+            <SimpleContainer pics={guitarComponents} style={{ height: "110% !important", marginTop: "200px", marginBottom: "100px" }} />
 
 
         </div>

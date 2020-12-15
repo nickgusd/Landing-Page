@@ -5,13 +5,18 @@
 }
 
 
-  #Phoenix, #Jason {
+  /* #Phoenix, #Jason {
     height: 400px !important;
-  }
+  } */
 
 
 
-/* #Adam, #Bruno{
-height: 200px !important;
-} */
+#artist1, #artist2 {
+  width: 100%;
+  
+  
+}
 
+#john, #jason {
+  height: 1000px 
+}

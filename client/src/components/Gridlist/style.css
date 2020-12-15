@@ -1,7 +1,8 @@
 
-.MuiGridListTile-root {
-    height: 25vh !important;
-}
+/* .MuiGridListTile-root {
+    height: auto !important;
+   
+} */
 
 #Image5, #Image6, #Image7, #Image8 {
     height: 380px !important;
@@ -18,3 +19,11 @@
     
 } 
 
+#gridList {
+    margin-top: 250px !important;
+    transform: scale(1.4);
+}
+
+#John {
+    height: 320px !important;
+}

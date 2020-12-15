@@ -48,8 +48,8 @@ console.log(props.artists[1].title.split(" ").shift())
           <GridListTile key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}  id={tile.title.split(" ").shift()} >
 
             {tile.featured ?  <Link to={`/artistpage/${tile.title}`}>
-            <img src={tile.img} alt={tile.title} />
-            </Link> : <img src={tile.img} alt={tile.title} />}
+            <img src={tile.img} alt={tile.title} id={tile.id}/>
+            </Link> : <img src={tile.img} alt={tile.title} id={tile.id} />}
  
             <GridListTileBar
               title={tile.title}
