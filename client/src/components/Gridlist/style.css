@@ -27,3 +27,12 @@
 #John {
     height: 320px !important;
 }
+
+@media (min-width: 1441px) {
+
+    #slider-query {
+        transform: scale(.8);
+    }
+
+
+}

@@ -29,6 +29,7 @@ export default function FullWidthGrid(props) {
    
     console.log(props.guitarCards)
 
+
     return (
         <div className={classes.root} id="guitar-grid">
 
@@ -38,11 +39,11 @@ export default function FullWidthGrid(props) {
 
                     return (
                         <Grid item xs={12} sm={6} key={guitar.img} >
-                        <Paper className={classes.paper} style={{ height: "30vh" }}>
-                        <h2>{guitar.title}</h2>
-                        <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} ></img>
+                        <Paper className={classes.paper} style={{ height: "30vh" }} id={guitar.id} >
+                        <h2 className="guitar-heading">{guitar.title}</h2>
+                        <img src={guitar.img} style={{display: "block", margin: "0 auto", height: "136px", width: "371px" }} className ="guitar-page-images"></img>
                         <Link to={`/guitarpage/${guitar.title}`}>
-                        <Button variant="outline-dark" type="button"  className={guitar.title}  >
+                        <Button variant="outline-dark" type="button"  className={guitar.title} id="guitar-buttons" >
                             {guitar.title}
                         </Button>{' '}
                         </Link>

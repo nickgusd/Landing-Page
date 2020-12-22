@@ -16,11 +16,12 @@ function MyCarousel(props) {
             src={pic.img}
             alt="Third slide"
             style={{ width: "1280px", height: "720px" }}
+            id = "carousel-images"
           />
 
           <Carousel.Caption>
             <h3>Ernie Ball</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
 

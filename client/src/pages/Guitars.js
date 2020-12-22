@@ -23,7 +23,8 @@ const photos = [
         Pickguard: "None",
         Hardware: "Chrome",
         Price: "$5,299.00",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar1"
     },
     {
         img: Image2,
@@ -34,7 +35,8 @@ const photos = [
         Pickguard: "None",
         Hardware: "Chrome",
         Price: "$3,000.00",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar2"
 
     },
     {
@@ -46,7 +48,8 @@ const photos = [
         Pickguard: "None",
         Hardware: "Chrome",
         Price: "$10,000",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar3"
     },
     {
         img: "https://www.guitar-planet.co.uk/wp-content/uploads/2016/01/Ernie-Ball-Music-Man-Majesty-Goldmine.png",
@@ -57,7 +60,8 @@ const photos = [
         Pickguard: "None",
         Hardware: "Chrome",
         Price: "$3,000",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar4"
     },
     {
         img: Image4,
@@ -68,16 +72,19 @@ const photos = [
         Pickguard: "Black",
         Hardware: "Chrome",
         Price: "$2,499",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar5"
         
     },
     {
         img: NewGuitar1,
         title: "Axis",
+        id: "guitar6"
     },
     {
         img: NewGuitar2,
         title: "Stingray",
+        id: "guitar7"
     },
     {
         img: NewGuitar4,
@@ -88,18 +95,14 @@ const photos = [
         Pickguard: "Matte Black",
         Hardware: "Chrome",
         Price: "$2,599",
-        Qty: "10"
+        Qty: "10",
+        id: "guitar8"
     },
  
 
 
 
 ]
-
-
-
-
-
 
 
 function Guitars() {

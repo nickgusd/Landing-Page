@@ -12,3 +12,18 @@ body {
    height: 150px;
    
 }
+
+.thick-nav {
+    height: 400px !important;
+}
+
+
+
+@media(max-width: 769px) {
+
+    .music-man-logo {
+        transform: scale(.6) !important;
+        
+    }
+
+}

@@ -19,9 +19,6 @@ function GuitarPage(props) {
     }, [])
 
     
-
-
-
     return (
         <div>
             <GuitarPageGrid  guitars={guitars} />

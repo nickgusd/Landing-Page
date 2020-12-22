@@ -44,7 +44,7 @@ export default function SingleLineGridList(props) {
         }
 
     return (
-        <div  style={{height: "30vh"}}>
+        <div  style={{height: "30vh"}} id='slider-query'>
             <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
 
@@ -68,4 +68,6 @@ export default function SingleLineGridList(props) {
         </div>
     );
 }
+
+
 

@@ -11,3 +11,23 @@
 #guitar-grid {
     margin-top: 200px;
 }
+
+@media (max-width: 769px) {
+
+    .guitar-page-images {
+        transform: scale(.6)
+    }
+
+    .guitar-heading {
+        font-size: 20px;
+    }
+
+    #guitar-buttons {
+        transform: scale(.6);
+        position: relative;
+        bottom: 20px;
+    }
+
+}
+
+

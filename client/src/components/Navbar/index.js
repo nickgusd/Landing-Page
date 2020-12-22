@@ -131,8 +131,16 @@ function MyNavbar() {
 
     const [search, setSearch] = useState();
     const [result, setResult] = useState([]);
+    const [isCollapsed, setCollapsed] = useState(true)
     const inputRef = useRef();
     let history = useHistory();
+    let centerNav1 = document.querySelector(".Link1");
+    let centerNav2 = document.querySelector(".Link2");
+    let centerNav3 = document.querySelector(".Link3");
+    let searchInput = document.querySelector(".mr-sm-2");
+    let searchButton = document.querySelector("#search-button");
+    let firstCard = document.querySelector("#guitar1");
+
 
     useEffect( () => {
         // runSearch()
@@ -165,6 +173,25 @@ function MyNavbar() {
 
     }
 
+    const handleCollapse = () => {
+        
+        if (isCollapsed) {
+            setCollapsed(false)
+            centerNav1.setAttribute("style", "display: block; margin: 0 auto !important;")
+            centerNav2.setAttribute("style", "display: block; margin: 0 auto !important;")
+            centerNav3.setAttribute("style", "display: block; margin: 0 auto !important;")
+            searchInput.setAttribute("style", "display: block; margin: 0 auto !important;")
+            searchButton.setAttribute("style", "position: relative; right: 50px")
+            firstCard.setAttribute("style", "margin-top: 260px")
+
+        } else {
+            setCollapsed(true)
+            firstCard.setAttribute("style", "margin-top: 0px")
+        }
+
+    }
+
+    
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -190,14 +217,14 @@ function MyNavbar() {
 
     return (
         <div>
-            <Navbar bg="light" expand="lg" id="myNav" className="navbar-fixed-top">
-                <Navbar.Brand href="#home"><img src={Logo} alt="logo" style={{ transform: "scale(.8)" }}></img></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar bg="light" expand="lg" id="myNav" className="navbar-fixed-top" className={!isCollapsed ? "thick-nav" : ""}>
+                <Navbar.Brand href="#home"><img src={Logo} alt="logo" style={{ transform: "scale(.8)" }} className="music-man-logo"></img></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleCollapse} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/guitars">Guitars</Nav.Link>
-                        <Nav.Link href="/artists">Artists</Nav.Link>
+                        <Nav.Link href="/" className="Link1">Home</Nav.Link>
+                        <Nav.Link href="/guitars" className="Link2" >Guitars</Nav.Link>
+                        <Nav.Link href="/artists" className="Link3" >Artists</Nav.Link>
                     </Nav>
                     <Form inline>
                         <input type="text" placeholder="Search" className="mr-sm-2" list="data" onChange={handleInputChange} ref={inputRef} style={{ borderRadius: "3%" }} />
@@ -208,7 +235,7 @@ function MyNavbar() {
                             )}
                         </datalist>
                         {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
-                        <Button variant="outline-success" onClick={handleFormSubmit}>Search</Button>
+                        <Button variant="outline-success" onClick={handleFormSubmit} id="search-button">Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
