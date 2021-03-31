@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
         background:
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
     },
+    
+
 }));
 
 //click function for image redirect
@@ -50,15 +52,16 @@ export default function SingleLineGridList(props) {
 
 
                     
-                    <GridListTile key={tile.img} id={tile.id} >
+                    <GridListTile key={tile.img} id={tile.id}  >
                         {tile.type === "iframe" ? {...tile.img} : ""}
                         
                         <img src={tile.img} alt={tile.title} onClick={handleClick} />
                         <GridListTileBar
-                            
+                           
                             title={tile.title}
                             classes={{
                                 root: classes.titleBar,
+                                tile: classes.tile
                                 // title: classes.title,
                             }}
                         />
