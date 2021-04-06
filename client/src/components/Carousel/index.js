@@ -5,10 +5,7 @@ import "./style.css"
 function MyCarousel(props) {
   console.log(props)
   return (
-
-
     <Carousel>
-
       {props.carouselpics.map(pic => {
         return <Carousel.Item>
           <img
@@ -24,10 +21,7 @@ function MyCarousel(props) {
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
-
-
       })}
-
     </Carousel>
   )
 }

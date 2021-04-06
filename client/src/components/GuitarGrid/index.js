@@ -25,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthGrid(props) {
 
     const classes = useStyles();
-    
-   
-    console.log(props.guitarCards)
-
 
     return (
         <div className={classes.root} id="guitar-grid">
@@ -49,7 +45,6 @@ export default function FullWidthGrid(props) {
                         </Link>
                         </Paper>
                         </Grid>
-
                     )
                 })}
             </Grid>

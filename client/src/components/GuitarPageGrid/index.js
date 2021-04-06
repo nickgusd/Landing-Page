@@ -25,7 +25,7 @@ const guitarDataMongo = [
       "price": 5299,
       "__v": 0,
       "image": "https://i.pinimg.com/originals/94/77/85/94778524711b3553d63b54d7b2c4da75.jpg",
-      "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/instrument-77.png?1588624445",
+      "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instrument_build_images/image/full/612-JJ-50-00.png?1588649389",
       "componentImage": "https://www.music-man.com/assets/images/instruments/expanded/john-petrucci/majesty-headstock.jpg.pagespeed.ce.mTA3RlaTaX.jpg",
       "color": "Purple Nebula",
       "hardware": "Chrome",
@@ -108,7 +108,7 @@ const guitarDataMongo = [
       "quantity": 10,
       "price": 2149,
       "image": "https://i.pinimg.com/originals/ac/cd/a5/accda556b9106fc2880965f0cae9d413.jpg",
-      "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/instrument-71.png?1602686452",
+      "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instrument_colors/image_swap/full/364.png?1610580070",
       "componentImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/slides-11/slide-71.jpg?1522705218",
       "neck": "Figured Roasted",
       "color": "Charging Green",
@@ -136,29 +136,10 @@ export default function GuitarPageGrid(props) {
   const classes = useStyles();
   const [guitarData, setGuitarData] = useState("");
   const guitarName= props.guitars
-  console.log(guitarName)
-
+ 
   useEffect(() => {
-
-    // getGuitarData()
     setGuitarData(guitarDataMongo)
-
   }, [])
-
-
-  // const getGuitarData = async () => {
-
-  //   try {
-  //     await API.getGuitarByName(guitarName)
-  //       .then(res => {
-  //         setGuitarData(res.data);
-  //         console.log(res.data)
-  //       })
-
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // }
 
   return (
     <div className={classes.root} id="guitar-grid">
@@ -170,7 +151,7 @@ export default function GuitarPageGrid(props) {
              
 
               return <div>
-                <img src={item.image} style={{ width: "100%", height: "723px" }} />
+                <img src={item.image} style={{ width: "100vw", height: "calc(100vh - 110px)" }} />
               </div>
 
             }

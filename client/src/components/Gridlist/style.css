@@ -1,8 +1,4 @@
 
-/* .MuiGridListTile-root {
-    height: auto !important;
-   
-} */
 
 #Image5, #Image6, #Image7, #Image8 {
     height: 380px !important;
@@ -10,12 +6,12 @@
 
 #iframe1, #iframe2, #iframe3, #iframe4 {
     height: 315px !important;
-    width: 560px !important;
+    width: 25vw !important;
 }
 
 #component1, #component2, #component3, #component4 {
     height: 315px !important;
-    width: 560px !important;
+    width: 25vw !important;
     
 } 
 
@@ -28,11 +24,14 @@
     height: 320px !important;
 }
 
+iframe {
+    width: 25vw !important;
+}
+
+
 @media (min-width: 1441px) {
-
-    #slider-query {
-        transform: scale(.8);
-    }
-
-
+.MuiGridListTile-root {
+    height: 300px !important;
+    /* width: 100% !important; */
+} 
 }

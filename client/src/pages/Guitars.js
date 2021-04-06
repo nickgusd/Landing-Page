@@ -98,20 +98,12 @@ const photos = [
         Qty: "10",
         id: "guitar8"
     },
- 
-
-
-
 ]
-
 
 function Guitars() {
     return (
         <div>
-
             <FullWidthGrid guitarCards={photos} />
-
-
         </div>
     )
 }

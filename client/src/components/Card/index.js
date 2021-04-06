@@ -64,10 +64,7 @@ export default function GuitarCard(props) {
                     </IconButton>
                 }
                 title={"Hello"}
-
             />
-
-                
             <CardMedia
                 className={classes.media}
                 image=""

@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
+        // height: "100vh !important"
     },
     gridList: {
         flexWrap: 'nowrap',
@@ -26,23 +27,19 @@ const useStyles = makeStyles((theme) => ({
     titleBar: {
         background:
             'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-    },
-    
-
+            // height: "100% !important"
+    }
 }));
 
 //click function for image redirect
 
 export default function SingleLineGridList(props) {
     const classes = useStyles();
-
-    console.log(props.images)
-
     let history = useHistory();
+    const frame = "iframe"
 
     const handleClick = () => {
         history.push(`/guitars`)
-        
         }
 
     return (
@@ -50,9 +47,7 @@ export default function SingleLineGridList(props) {
             <GridList className={classes.gridList}  cols={2.5} >
                 {props.images.map((tile) => (
 
-
-                    
-                    <GridListTile key={tile.img} id={tile.id}  >
+                    <GridListTile key={tile.img} id={tile.id} >
                         {tile.type === "iframe" ? {...tile.img} : ""}
                         
                         <img src={tile.img} alt={tile.title} onClick={handleClick} />
@@ -62,7 +57,6 @@ export default function SingleLineGridList(props) {
                             classes={{
                                 root: classes.titleBar,
                                 tile: classes.tile
-                                // title: classes.title,
                             }}
                         />
                     </GridListTile>

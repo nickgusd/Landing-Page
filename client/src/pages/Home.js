@@ -148,7 +148,7 @@ const artistVids = [
         id: "iframe3"
     },
     {
-        img: <iframe width="560" height="315" src="https://www.youtube.com/embed/RqcXAoDRaH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+        img: <iframe  width="560" height="315" src="https://www.youtube.com/embed/RqcXAoDRaH0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
         title: "Sterling",
         type: "iframe",
         id: "iframe4"
@@ -159,14 +159,12 @@ const artistVids = [
 
 function Home() {
     return (
-        <div >
+        <div>
             <Carousel carouselpics={carouselpics} />
-            <SimpleContainer pics={photos} style={{ width: "100% !important" }} />
-            <SimpleContainer pics={newGuitars} style={{ width: "100% !important" }} />
-            <SimpleContainer pics={artistVids} style={{ width: "100% !important" }} className="artist-container" />
+            <SimpleContainer pics={photos} style={{ width: "100vw !important" }} />
+            <SimpleContainer pics={newGuitars} style={{ width: "100vw !important" }} />
+            <SimpleContainer pics={artistVids} style={{ width: "100vw !important" }} className="artist-container" />
             <SimpleContainer pics={guitarComponents} style={{ height: "110% !important", marginTop: "200px", marginBottom: "100px" }} />
-
-
         </div>
     )
 }

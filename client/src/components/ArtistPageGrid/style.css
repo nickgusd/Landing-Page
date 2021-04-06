@@ -22,13 +22,6 @@
     transform: scale(.9)
 }
 
-/* #page-video {
-    display: block !important;
-    margin: 0 auto !important;
-    transform: scale(1.2) !important;
-    margin-top: 50px;
-} */
-
 #jasonvid, #johnvid {
     display: block !important;
     margin: 0 auto !important;
@@ -41,7 +34,5 @@
 }
 
 #Jason{
-
     height: 320px !important;
-    
 }
