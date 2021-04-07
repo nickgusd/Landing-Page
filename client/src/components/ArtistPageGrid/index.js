@@ -22,19 +22,17 @@ const useStyles = makeStyles((theme) => ({
 export default function ArtistPageGrid(props) {
     const classes = useStyles();
 
-    console.log(props.data)
-
     return (
         <div>
                 {props.data.map(artist => {
                     if (props.artist === artist.artist) {
-
+                        console.log(artist)
                         return (
                             <div className={classes.root} id="artist-page-grid">
                             <Grid container spacing={3}>
 
-                                <Grid item xs={12}>
-                                    <img src={artist.image} id={artist.id} />
+                                <Grid item xs={12} xl={12}>
+                                    <img src={artist.image} id={artist.id} style={{width: "100vw", height: "calc(100vh - 150px)"}}/>
                                 </Grid>
 
                                 <Grid item xs={12}>
@@ -74,13 +72,9 @@ export default function ArtistPageGrid(props) {
 
                             </Grid>
                             </div>
-
                         )
-
                     }
                 })}
-
-            
         </div>
     )
 }
