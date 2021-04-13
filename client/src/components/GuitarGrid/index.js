@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
 export default function FullWidthGrid(props) {
 
     const classes = useStyles();
@@ -32,7 +31,6 @@ export default function FullWidthGrid(props) {
             <Grid container spacing={3}>
 
                 {props.guitarCards.map(guitar => {
-
                     return (
                         <Grid item xs={12} sm={6} key={guitar.img} >
                         <Paper className={classes.paper} style={{ height: "30vh" }} id={guitar.id} >

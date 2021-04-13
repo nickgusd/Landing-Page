@@ -36,12 +36,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleModal(props) {
 
-    console.log(props)
-    // let brick = []
-    // brick.push(props);
-    // console.log(brick)
-
-
     const classes = useStyles();
     // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = React.useState(getModalStyle);
@@ -56,9 +50,6 @@ export default function SimpleModal(props) {
     };
 
     const body = (
-
-
-
         <div style={modalStyle} className={classes.paper} id="centerModal">
             <strong><h2 id="simple-modal-title" style={{fontSize: "20px", textAlign: "center"}}>{props.instrument}</h2></strong>
             <hr/>
@@ -81,18 +72,12 @@ export default function SimpleModal(props) {
             <strong>In Stock:</strong> {props.qty}
             </p>
             <Paypal qty={props.qty}/>
-
-            {/* <SimpleModal /> */}
         </div>
     );
 
  
     return (
-
-
-
         <div>
-
             <Button variant="outline-dark" type="button" onClick={handleOpen}>{props.instrument}</Button>
             <Modal
                 open={open}
@@ -102,8 +87,6 @@ export default function SimpleModal(props) {
             >
                 {body}
             </Modal>
-
-
         </div>
     );
 }

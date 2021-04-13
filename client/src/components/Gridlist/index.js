@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
-        // height: "100vh !important"
     },
     gridList: {
         flexWrap: 'nowrap',
@@ -36,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
 export default function SingleLineGridList(props) {
     const classes = useStyles();
     let history = useHistory();
-    const frame = "iframe"
 
     const handleClick = () => {
         history.push(`/guitars`)

@@ -3,7 +3,6 @@ import { Carousel } from "react-bootstrap";
 import "./style.css"
 
 function MyCarousel(props) {
-  console.log(props)
   return (
     <Carousel>
       {props.carouselpics.map(pic => {
@@ -18,7 +17,6 @@ function MyCarousel(props) {
 
           <Carousel.Caption>
             <h3>Ernie Ball</h3>
-            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       })}

@@ -11,7 +11,6 @@ import ArtistPage from "./pages/ArtistPage";
 
 
 function App() {
-
   return (
     <>
       <Router>
@@ -23,7 +22,6 @@ function App() {
         <Route exact path="/guitarpage/:guitar" render={(props) => <GuitarPage {...props} />} />
         <Route exact path="/artistpage/:artist" render={(props) => <ArtistPage {...props} />} />
       </Router>
-
     </>
   );
 }

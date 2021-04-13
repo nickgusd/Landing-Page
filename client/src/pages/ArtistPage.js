@@ -45,24 +45,16 @@ export default function ArtistPage(props) {
 
                 }
             ]
-
-
         }
     ]
 
 
     useEffect(() => {
-
         const guitarist = props.match.params.artist;
-        console.log(guitarist)
         setArtists(guitarist)
-
     }, [])
 
-
-
-
-    return <div>
+    return <div style={{margin: "0px !important", padding: "0px !important"}}>
         <ArtistPageGrid artist={artists} data={artistInfo} />
     </div>
 }

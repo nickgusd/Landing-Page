@@ -1,7 +1,9 @@
-/* .paypal-button-container {
-    transform: scale(.7)
-} */
+
 
 .paypal-buttons {
-    width: 60% !important;
+     width: 25vw !important;
+     display: block;
+     margin: 0 auto;
+     padding: 0px !important;
+     overflow: hidden;
 }

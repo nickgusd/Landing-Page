@@ -143,32 +143,13 @@ function MyNavbar() {
 
 
     useEffect( () => {
-        // runSearch()
         setResult(guitarDataMongo)
 
     }, [])
 
-
-    // const runSearch = async () => {
-
-    //     try {
-    //         await API.getGuitars()
-    //         .then(res => {
-    //             setResult(res.data);
-    //             }) 
-
-    //     } catch(err) {
-    //         console.log(err);
-    //     }
-       
-    // }
-
-    console.log(result)
-
     const handleInputChange = (event) => {
 
         const { value } = event.target;
-        console.log(value)
         setSearch(value)
 
     }

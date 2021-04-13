@@ -135,7 +135,6 @@ const guitarDataMongo = [
 export default function GuitarPageGrid(props) {
   const classes = useStyles();
   const [guitarData, setGuitarData] = useState("");
-  const guitarName= props.guitars
  
   useEffect(() => {
     setGuitarData(guitarDataMongo)
