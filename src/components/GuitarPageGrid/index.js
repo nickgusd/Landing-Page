@@ -38,7 +38,7 @@ const guitarDataMongo = [
       "quantity": 10,
       "price": 3000,
       "__v": 0,
-      "image": "https://www.alaska-wildlife-guide.com/wp-content/uploads/2019/10/northernlights-4.jpg",
+      "image": "https://images.hdqwalls.com/download/aurora-northern-lights-4k-hh-2880x1800.jpg",
       "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/instrument-32.png?1588615228",
       "componentImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/slides-6/slide-32.jpg?1484679195",
       "color": "Arctic Dream",
@@ -109,7 +109,7 @@ const guitarDataMongo = [
       "price": 2149,
       "image": "https://i.pinimg.com/originals/ac/cd/a5/accda556b9106fc2880965f0cae9d413.jpg",
       "guitarImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instrument_colors/image_swap/full/364.png?1610580070",
-      "componentImage": "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/slides-11/slide-71.jpg?1522705218",
+      "componentImage": "https://i.pinimg.com/originals/ac/cd/a5/accda556b9106fc2880965f0cae9d413.jpg",
       "neck": "Figured Roasted",
       "color": "Charging Green",
       "pickguard": "Parchment",
@@ -147,12 +147,9 @@ export default function GuitarPageGrid(props) {
           {guitarData === "" ? "" : guitarData.map(item => {
 
             if (item.guitar === props.guitars) {
-             
-
               return <div>
-                <img src={item.image} style={{ width: "100vw", height: "calc(100vh - 110px)" }} />
+                <img src={item.image} style={{ width: "100vw", height: "calc(100vh - 110px)" }} alt={item.guitar} />
               </div>
-
             }
           })}
 
@@ -203,20 +200,16 @@ export default function GuitarPageGrid(props) {
             {guitarData === "" ? "" : guitarData.map(item => {
 
               if (item.guitar === props.guitars) {
-
                 return <div>
-
                   <h2>Price: ${item.price}</h2>
-
                 </div>
-
               }
             })}
 
             <Paypal />
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{padding: "12px 12px 0px 12px"}}>
           {guitarData === "" ? "" : guitarData.map(item => {
 
             if (item.guitar === props.guitars) {

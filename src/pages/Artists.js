@@ -9,15 +9,11 @@ import image11 from "../assets/artists/standard-artist-229.jpg";
 import Image12 from "../assets/artists/standard-artist-255.jpg";
 import Image13 from "../assets/artists/standard-artist-275.jpg";
 
-
-
 import AdvancedGridList from "../components/AdvancedGridList/index";
-
-
 
 const photos2 = [
     {
-        img: "https://www.metalsucks.net/wp-content/uploads/2020/02/John-Petrucci-Wacken-2015-Wikipedia-Commons.jpg",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/12/Dreamtheater_-_Wacken_Open_Air_2015-1619.jpg",
         title: "John Petrucci",
         featured: true,
         id: "artist1"
@@ -74,9 +70,7 @@ function ArtistPage() {
 
     return (
         <div>
-          
             <AdvancedGridList  artists={photos2} />
-
         </div>
     )
 }

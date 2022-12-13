@@ -1,10 +1,10 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState, useRef } from "react";
-import { NavDropdown, Form, FormControl, Button, Nav, Navbar } from "react-bootstrap";
+import { Form, Button, Nav, Navbar} from "react-bootstrap";
 import Logo from "../../assets/download-3.jpg";
 import "./style.css"
 import { useEffect } from "react";
 import {useHistory} from "react-router-dom";
-import API from "../../utils/API"
 
 const guitarDataMongo = [
     {
@@ -209,13 +209,11 @@ function MyNavbar() {
                     </Nav>
                     <Form inline>
                         <input type="text" placeholder="Search" className="mr-sm-2" list="data" onChange={handleInputChange} ref={inputRef} style={{ borderRadius: "3%" }} />
-
                         <datalist id="data">
                             {result.map(item =>
                                 <option key={item._id} value={item.guitar} />
                             )}
                         </datalist>
-                        {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
                         <Button variant="outline-success" onClick={handleFormSubmit} id="search-button">Search</Button>
                     </Form>
                 </Navbar.Collapse>

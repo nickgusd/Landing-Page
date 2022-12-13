@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ArtistPageGrid from "../components/ArtistPageGrid";
+import Boo from "../assets/wp2401708-born-of-osiris-wallpapers.jpg"
 
 
 export default function ArtistPage(props) {
@@ -9,7 +10,7 @@ export default function ArtistPage(props) {
     const artistInfo = [
         {
             artist: "Jason Richardson",
-            image: "https://cdn.hipwallpaper.com/i/27/98/uDUnr3.jpg",
+            image: Boo,
             bio: "The Ernie Ball Music Man Jason Richardson Artist Series Cutlass guitar is the latest collaboration between the award-winning Ernie Ball Music Man design team and the multitalented virtuoso guitarist and composer Jason Richardson. Featuring innovative design characteristics engineered specifically for Jason's exacting technique, the Richardson Artist Series Cutlass offers unique features and aesthetics that will give players a fresh look at one of our most popular models.",
             guitar: "https://s3-us-west-2.amazonaws.com/static.music-man.com/website/images/instruments/instrument-81.png?1603988200",
             band: "Solo Artist",
