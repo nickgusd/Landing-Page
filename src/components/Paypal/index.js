@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./style.css"
+import "./style.css";
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 function Paypal() {
-
-
-  const createOrder = (data, actions) =>{
+  const createOrder = (data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
