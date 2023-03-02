@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-duplicate-props */
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Form, Nav, Navbar } from "react-bootstrap";
 import Logo from "../../assets/download-3.jpg";
 import "./style.css";
@@ -152,7 +152,6 @@ function MyNavbar() {
   const [search, setSearch] = useState("");
   const [result, setResult] = useState([]);
   const [isCollapsed, setCollapsed] = useState(true);
-  const inputRef = useRef();
   let history = useHistory();
   let centerNav1 = document.querySelector(".Link1");
   let centerNav2 = document.querySelector(".Link2");

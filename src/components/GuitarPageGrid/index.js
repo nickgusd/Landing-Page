@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import API from "../../utils/API";
-import "./style.css";
 import Paypal from "../Paypal/index";
+
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
