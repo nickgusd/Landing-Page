@@ -215,7 +215,7 @@ function MyNavbar() {
   return (
     <div>
       <Navbar bg="light" expand="lg" id="myNav" className="navbar-fixed-top">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             src={Logo}
             alt="logo"
